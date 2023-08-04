@@ -13,7 +13,7 @@ while($rs = mysqli_fetch_array($guardar)){
 }
 
 if ($rc == $correo){
-    echo 'El correo ya existe';
+    echo '<span class="text-red">El correo ya existe</span>';
 } else{
     echo 'Correo valido';
 }

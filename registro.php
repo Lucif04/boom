@@ -68,7 +68,7 @@ session_start();
                         <input type="email" name="correo" id="correo" placeholder="correo" required onkeyup="validarCorreo()" >
                         <div name="msjc" id="msjc" class="msjc"></div>
                         <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
-                        <input type="password" name="clavee" id="clavee" placeholder="Contraseña" required onclick="validar();">
+                        <input type="password" name="clavee" id="clavee" placeholder="Contraseña" required onkeyup="validar();">
                         <div type="text" name="msj" id="msj" class="msjc"></div>
                     </div>
 
@@ -87,7 +87,7 @@ session_start();
                             <option value="7">gata</option>
                             <option value="8">Sr</option>
                         </select>
-                        <button name="boton" id="boton">Crear</button>
+                        <button name="boton" id="btn-crear">Crear</button>
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@ session_start();
     document.getElementById("cancelBtn").addEventListener("click", function() {
     document.getElementById("loginPopup").style.display = "none";
     });
- </script>
+</script>
 
 <script type="text/javascript">
 
@@ -159,16 +159,18 @@ session_start();
 
     function validar(){
         //generar una variable con lo que el usuario ingresa 
-        var clave = document.getElementById("clavee").value
+        var clave = document.getElementById("clavee").value;
+        var btn = document.getElementById("btn-crear");
         //generar una respuesta en el input "msj" y mostrarle al usuario dependendio su tamaño de clave 
         if(clave.length > 6){
             //con .inertText hacemos que inserte, con .value le damos un valor y por eso es necesario un input.
-            document.getElementById("msj").innerText = 'Clave correcta'
+            document.getElementById("msj").innerText = 'Clave correcta';
+            /*Habilitamos el boton*/
+            btn.removeAttribute("disabled","");
         } else{
-            document.getElementById("msj").innerText = 'La clave debe tener al menos 6 caracteres'
-            document.addEventListener("boton", function(){
-            document.preventDefault("boton");
-                });
+            document.getElementById("msj").innerHTML = '<span class="text-red">La clave debe tener al menos 6 caracteres</span>';
+            /*Desabilitamos el boton*/
+            btn.setAttribute("disabled","");
         }
     }
     

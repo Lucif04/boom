@@ -162,7 +162,11 @@ header img{
     margin-bottom: 9px;
 }
 
-    /*imprimimos*/
+.text-red{
+    color: red;
+}
+
+/*imprimimos*/
 
 .imprimir_datos{
     margin-top: 116px;
