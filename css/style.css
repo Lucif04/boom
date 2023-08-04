@@ -1,0 +1,271 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(94deg, rgb(3 140 208) 0%, rgb(0 110 165) 100%);
+    background-color: n;
+    font-family: sans-serif;
+    color: white;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 10px;
+    height: 98px;
+}
+
+header img{
+    margin-inline: 30px;
+    width: 200px;
+    height: 98px;
+}
+
+/*Desplegable inicio de sesion*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(103, 182, 235) ;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 30px solid #ccc;
+
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    padding:5px;
+    font-size:14px;
+    border-radius:15px;
+  }
+  
+.buttons input{
+    text-align: center;
+    background: linear-gradient(#ff9e5f 10%, #ff761b 40%)!important;
+    color:white;
+    padding:8px;
+    font-size:14px;
+    border-radius:15px;
+    margin-top: 10px;
+    
+}
+  
+.popup input {
+    text-align: center;
+    background: linear-gradient(#ffffff 10%, #fad1b6 40%);
+    color:rgb(0, 0, 0);
+    padding:10px;
+    font-size:16px;
+    border-radius:25px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.cursor{
+    font-weight: 600;
+    cursor: pointer;
+    color:white;
+    text-decoration: none;    
+}
+
+
+.mb-2{
+    margin-bottom: 8rem!important;
+}
+
+/*Crear personaje*/
+.titulo{
+    text-align: center;
+    font-size: 600;
+}
+/*Formulario*/
+
+.contenedor{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.contenedor input, select{
+    border:0px;
+    border-bottom:1px solid lightgray;
+    margin-bottom:15px;
+    padding: 8px 5px;
+    width:60%;
+    border-radius: 10px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.datos{
+    align-items: center;
+    text-align:center;
+    color: #fff;
+    
+}
+
+.datos h3{
+    margin-bottom:40px;
+}
+/*Elejir personaje*/
+.pj{
+    justify-content: center;
+    align-items: center;
+}
+
+.pj .img{
+    width: 400px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.pj button{
+    text-align: center;
+    background: linear-gradient(#ff9e5f 10%, #ff761b 40%)!important;
+    color:white;
+    padding:10px;
+    font-size:16px;
+    border-radius:25px;
+    margin-top: 10px;
+}
+
+.msjc{
+    margin-top: -5px; 
+    margin-bottom: 9px;
+}
+
+    /*imprimimos*/
+
+.imprimir_datos{
+    margin-top: 116px;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.imprimir_datos h4{
+    margin: 4px;
+}
+
+button{
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(#ff9e5f 10%, #ff761b 40%)!important;
+    color:white;
+    padding:10px;
+    font-size:14px;
+    border-radius:22px;
+    margin-top: 10px;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    height: 70px;
+    background: rgb(24, 22, 22);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+}
+
+.cont-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.logo-lb{
+    display: flex;
+    align-items: center;
+}
+.logo-lb img{
+    width: 60px; 
+    height: auto;
+}
+
+.logo-lb h4{
+    font-size: 16px;
+    color: white;
+
+}
+
+.redes img{
+    width: 30px;
+    height: auto;
+    margin-inline: 6px;
+}
+
+
+@media (max-width: 700px ){
+
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header img{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .contenedor{
+        text-align: center;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    
+    .imprimir_datos{
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a{
+        margin-top: 10px;
+        text-decoration: none;
+        font-size:16px;
+    }
+}
