@@ -43,7 +43,7 @@ CREATE TABLE `registros` (
 
 INSERT INTO `registros` (`id_usuario`, `nombre`, `telefono`, `correo`, `usuario`, `clave`, `pj`) VALUES
 (1, 'Lucia', 222, 'lucia@gmail.com', 'Luci', 'dale2', 2),
-(4, 'Sabrina', 32423423, 'sabrinabuffarini@gmail.com', 'SKB', '5reina', 3),
+(4, 'Sabrina', 32423423, 'sabrina@gmail.com', 'SKB', '5reina', 3),
 (5, 'Dalma', 55884477, 'dalma@gmai.com', 'Dalma', 'dddd250', 4);
 
 --
