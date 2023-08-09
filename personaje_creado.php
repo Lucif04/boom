@@ -130,13 +130,13 @@ mail($para, $titulo, $mensaje, $de);
     <footer>
         <div class="cont-footer">
             <div class="logo-lb">
-                <img src="iconos/logo-lb.png" alt="">
+                <img src="assets/iconos/logo-lb.png" alt="">
                 <h4>copyright</h4>
             </div>
             <div class="redes">
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=5492364652498"><img src="iconos/whatsapp.png" alt=""></a>
-                <a target="_blank" href="#"><img src="iconos/instagram.png" alt=""></a>
-                <a  target="_blank" href="#"><img src="iconos/facebook.png" alt=""></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=5492364652498"><img src="assets/iconos/whatsapp.png" alt=""></a>
+                <a target="_blank" href="#"><img src="assets/iconos/instagram.png" alt=""></a>
+                <a  target="_blank" href="#"><img src="assets/iconos/facebook.png" alt=""></a>
             </div>
         </div>
     </footer>
