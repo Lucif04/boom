@@ -39,7 +39,7 @@ mail($para, $titulo, $mensaje, $de);
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Boombang</title>
 </head>
 <body>
@@ -57,7 +57,7 @@ mail($para, $titulo, $mensaje, $de);
                 <button class="cursor"> <?php echo $_SESSION['usuario'] ?> </button>
                 <?php
                 ?> 
-                <button> <a class="cursor" href="cerrar_session.php">Cerrar sesion</a> </button>
+                <button> <a class="cursor" href="modelo/cerrar_session.php">Cerrar sesion</a> </button>
                 <?php
                 
             } else{
@@ -74,7 +74,7 @@ mail($para, $titulo, $mensaje, $de);
     <hr>
     <!--Esto solo se despliga cuando apretamos el boton LoginBtn-->
     <div id="loginPopup" class="popup">
-        <form action="login.php" method="POST" class="form">
+        <form action="modelo/login.php" method="POST" class="form">
             <h2>Iniciar sesión</h2>
             <input type="text" name="usuario" id ='usuario' placeholder="Nombre de usuario" required>
             <input type="password" name="clave" id = 'clave' placeholder="Contraseña" required>
@@ -92,28 +92,28 @@ mail($para, $titulo, $mensaje, $de);
             <div class="col pj">
                 <h3>Personaje elegido y sus datos</h3>
                 <?php if ($pjelegido == 1){
-                        ?> <img src="img/india.png" alt="india"> <?php
+                        ?> <img src="assets/img/india.png" alt="india"> <?php
 
                     } else if($pjelegido == 2){
-                        ?> <img src="img/dj.png" alt="dj"><?php
+                        ?> <img src="assets/img/dj.png" alt="dj"><?php
 
                     } else if($pjelegido == 3){
-                        ?> <img src="img/bruja.png" alt="bruja"><?php
+                        ?> <img src="assets/img/bruja.png" alt="bruja"><?php
 
                     } else if($pjelegido == 4){
-                        ?> <img src="img/sra.png" alt="Sra"><?php
+                        ?> <img src="assets/img/sra.png" alt="Sra"><?php
 
                     } else if($pjelegido == 5){
-                        ?> <img src="img/boomer.png" alt="boomer"><?php
+                        ?> <img src="assets/img/boomer.png" alt="boomer"><?php
 
                     } else if($pjelegido == 6){
-                        ?> <img src="img/ninia.png" alt="Niña"><?php
+                        ?> <img src="assets/img/ninia.png" alt="Niña"><?php
 
                     } else if($pjelegido == 7){
-                        ?> <img src="img/gata.png" alt="gata"><?php
+                        ?> <img src="assets/img/gata.png" alt="gata"><?php
 
                     } else if($pjelegido == 8){
-                        ?> <img src="img/sr.png" alt="Sr"><?php
+                        ?> <img src="assets/img/sr.png" alt="Sr"><?php
 
                     }?>
             </div>
@@ -144,16 +144,4 @@ mail($para, $titulo, $mensaje, $de);
 </body>
 </html>
 
-<script type="text/javascript">
-
-    //Ventana emergente para el inicio de sesion
-    //toma el evento y lo pone a escuchar, y un segundo argumento para llamar cada vez que se desencadena el evento descrito
-    document.getElementById("loginBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "block";
-    });
-    
-    //Aca cerramos la ventana emergente
-    document.getElementById("cancelBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "none";
-    });
- </script>
+<script type="text/javascript" src="assets/js/funcionamiento.js"> </script>

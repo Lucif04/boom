@@ -10,14 +10,15 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!--Style-->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Boombang</title>
 </head>
 <body>
         
     <header>
         <div class = "logo">
-            <a href="index.php"><img src="img/logo.png" alt="Boombang"></a>
+            <a href="index.php"><img src="assets/img/logo.png" alt="Boombang"></a>
         </div>
 
         <div>
@@ -29,7 +30,7 @@ session_start();
                 <button class="cursor"> <?php echo $_SESSION['usuario'] ?> </button>
                 <?php
                 ?> 
-                <button> <a class="cursor" href="cerrar_session.php">Cerrar sesion</a> </button>
+                <button> <a class="cursor" href="modelo/cerrar_session.php">Cerrar sesion</a> </button>
                 <?php
                 
             } else{
@@ -46,7 +47,7 @@ session_start();
     <hr>
     <!--Esto solo se despliga cuando apretamos el boton LoginBtn-->
     <div id="loginPopup" class="popup">
-        <form action="login.php" method="POST" class="form">
+        <form action="modelo/login.php" method="POST" class="form">
             <h2>Iniciar sesión</h2>
             <input type="text" name="usuario" id ='usuario' placeholder="Nombre de usuario" required>
             <input type="password" name="clave" id = 'clave' placeholder="Contraseña" required>
@@ -58,7 +59,7 @@ session_start();
     </div>
     
     <div class="contenedor mb-2">
-        <img style="width: 100%; height: auto;" src="img/inicio.png" alt="">
+        <img src="assets/img/inicio.png" alt="">
     </div>
 
     <!--Footer-->
@@ -78,17 +79,6 @@ session_start();
 </body>
 </html>
 
-<script type="text/javascript">
-
-    //Ventana emergente para el inicio de sesion
-    //toma el evento y lo pone a escuchar, y un segundo argumento para llamar cada vez que se desencadena el evento descrito
-    document.getElementById("loginBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "block";
-    });
-    
-    //Aca cerramos la ventana emergente
-    document.getElementById("cancelBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "none";
-    });
+<script type="text/javascript" src="assets/js/funcionamiento.js" >
  </script>
 

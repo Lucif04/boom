@@ -10,13 +10,13 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Boombang</title>
 </head>
 <body>
     <header>
         <div class = "logo">
-            <a href="index.php"><img src="img/logo.png" alt="Boombang"></a>
+            <a href="index.php"><img src="assets/img/logo.png" alt="Boombang"></a>
         </div>
 
         <div>
@@ -28,7 +28,7 @@ session_start();
                 <button class="cursor"> <?php echo $_SESSION['usuario'] ?> </button>
                 <?php
                 ?> 
-                <button> <a class="cursor" href="cerrar_session.php">Cerrar sesion</a> </button>
+                <button> <a class="cursor" href="modelo/cerrar_session.php">Cerrar sesion</a> </button>
                 <?php
                 
             } else{
@@ -45,7 +45,7 @@ session_start();
     <hr>
     <!--Esto solo se despliga cuando apretamos el boton LoginBtn-->
     <div id="loginPopup" class="popup">
-        <form action="login.php" method="POST" class="form">
+        <form action="modelo/login.php" method="POST" class="form">
             <h2>Iniciar sesión</h2>
             <input type="text" name="usuario" id ='usuario' placeholder="Nombre de usuario" required>
             <input type="password" name="clave" id = 'clave' placeholder="Contraseña" required>
@@ -74,8 +74,8 @@ session_start();
 
                     <div class="col pj">
                         <h3>Eleji tu personaje</h3>
-                        <img class="img" src="img/personajes1.png" alt="personajes">
-                        <img class="img" src="img/personajes2.png" alt="personajes">
+                        <img class="img" src="assets/img/personajes1.png" alt="personajes">
+                        <img class="img" src="assets/img/personajes2.png" alt="personajes">
                         <select required aria-required="true" name="pjelegido">
                             <option value="">Seleccionar personaje</option>
                             <option value="1">India</option>
@@ -114,64 +114,4 @@ session_start();
 </body>
 </html>
 
-<script type="text/javascript">
-
-    //Ventana emergente para el inicio de sesion
-    //toma el evento y lo pone a escuchar, y un segundo argumento para llamar cada vez que se desencadena el evento descrito
-    document.getElementById("loginBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "block";
-    });
-    
-    //Aca cerramos la ventana emergente
-    document.getElementById("cancelBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "none";
-    });
-</script>
-
-<script type="text/javascript">
-
-    //Ventana emergente para el inicio de sesion
-    //toma el evento y lo pone a escuchar, y un segundo argumento para llamar cada vez que se desencadena el evento descrito
-    document.getElementById("loginBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "block";
-    });
-    
-    //Aca cerramos la ventana emergente
-    document.getElementById("cancelBtn").addEventListener("click", function() {
-    document.getElementById("loginPopup").style.display = "none";
-    });
- </script>
-
- <script type="text/javascript">   
-    function validarCorreo(){
-        var correo = document.getElementById('correo').value
-
-        var xmlhttp;
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-                document.getElementById("msjc").innerHTML=xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("POST","validarcorreo.php?correo="+correo,true);
-        xmlhttp.send();
-   }
-
-    function validar(){
-        //generar una variable con lo que el usuario ingresa 
-        var clave = document.getElementById("clavee").value;
-        var btn = document.getElementById("btn-crear");
-        //generar una respuesta en el input "msj" y mostrarle al usuario dependendio su tamaño de clave 
-        if(clave.length > 6){
-            //con .inertText hacemos que inserte, con .value le damos un valor y por eso es necesario un input.
-            document.getElementById("msj").innerText = 'Clave correcta';
-            /*Habilitamos el boton*/
-            btn.removeAttribute("disabled","");
-        } else{
-            document.getElementById("msj").innerHTML = '<span class="text-red">La clave debe tener al menos 6 caracteres</span>';
-            /*Desabilitamos el boton*/
-            btn.setAttribute("disabled","");
-        }
-    }
-    
-</script>
+<script type="text/javascript" src="assets/js/funcionamiento.js"> </script>
